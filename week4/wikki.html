@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HTML - Wikipedia</title>
+  <style>
+    body {
+      font-family: 'Linux Libertine', 'Georgia', 'Times', serif;
+      line-height: 1.6;
+      color: #202122;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* === Wikipedia Header Style === */
+    .wiki-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 16px;
+      background-color: #fff;
+    }
+
+    .wiki-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .menu-icon {
+      font-size: 22px;
+      cursor: pointer;
+    }
+
+    .wiki-logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .wiki-logo img {
+      height: 32px;
+      margin-right: 6px;
+    }
+
+    .wiki-logo-text {
+      font-size: 1.3em;
+      font-weight: bold;
+    }
+
+    .wiki-subtext {
+      font-size: 0.8em;
+      color: #54595d;
+      margin-top: -4px;
+    }
+
+    .search-box {
+      display: flex;
+      border: 1px solid #ccc;
+      border-radius: 2px;
+      overflow: hidden;
+    }
+
+    .search-box input {
+      border: none;
+      padding: 6px 10px;
+      width: 200px;
+      outline: none;
+    }
+
+    .search-box button {
+      border: none;
+      background-color: #f8f9fa;
+      padding: 6px 12px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .wiki-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.9em;
+    }
+
+    .wiki-right a {
+      text-decoration: none;
+      color: #0645AD;
+    }
+
+    .dots {
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    /* === Article Styles === */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1em;
+    }
+
+    .header {
+      padding: 0.5em 0;
+    }
+
+    .title {
+      font-size: 1.8em;
+      margin: 0;
+      padding: 0;
+    }
+
+    .toc {
+      display: table;
+      float: right;
+      margin: 1em 0 1em 1em;
+      padding: 0.5em;
+      border: 1px solid #a2a9b1;
+      background-color: #f8f9fa;
+      font-size: 95%;
+    }
+
+    .toc-title {
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .toc ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .toc li {
+      margin: 0.3em 0;
+    }
+
+    .content {
+      margin-top: 1em;
+    }
+
+    .hatnote {
+      font-style: italic;
+      padding: 0.1em 1.6em;
+      margin: 0.5em 0;
+      color: #54595d;
+    }
+
+    .infobox {
+      float: right;
+      clear: right;
+      margin: 0.5em 0 1em 1em;
+      padding: 0.2em;
+      border: 1px solid #a2a9b1;
+      background-color: #f8f9fa;
+      font-size: 88%;
+      line-height: 1.5em;
+      width: 250px;
+    }
+
+    .infobox-title {
+      text-align: center;
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+
+    .infobox th {
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .infobox td {
+      vertical-align: top;
+    }
+
+    .tim {
+      float: right;
+      clear: right;
+      margin: 0.5em 0 1em 1em;
+      padding: 0.2em;
+      border: 1px solid #a2a9b1;
+      background-color: #f8f9fa;
+      font-size: 88%;
+      line-height: 1.5em;
+      width: 250px;
+    }
+
+    .tim img {
+      width: 100%;
+      height: auto;
+    }
+
+    .tim p {
+      text-align: center;
+      margin: 0.5em 0 0 0;
+      font-size: 0.9em;
+    }
+
+    h2 {
+      font-size: 1.5em;
+      border-bottom: 1px solid #a2a9b1;
+      margin: 1em 0 0.25em 0;
+      padding: 0;
+    }
+
+    h3 {
+      font-size: 1.2em;
+      margin: 1em 0 0.25em 0;
+    }
+
+    p {
+      margin: 0.5em 0;
+    }
+
+    .references {
+      font-size: 90%;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Wikipedia-Like Header -->
+  <div class="wiki-header">
+    <div class="wiki-left">
+      <div class="menu-icon">☰</div>
+      <div class="wiki-logo">
+        <img src="https://upload.wikimedia.org/wikipedia/en/8/80/Wikipedia-logo-v2.svg" alt="Wikipedia">
+        <div>
+          <div class="wiki-logo-text">Wikipedia</div>
+          <div class="wiki-subtext">The Free Encyclopedia</div>
+        </div>
+      </div>
+      <div class="search-box">
+        <input type="text" placeholder="Search Wikipedia">
+        <button>Search</button>
+      </div>
+    </div>
+    <div class="wiki-right">
+      <a href="#">Donate</a>
+      <a href="#">Create account</a>
+      <a href="#">Log in</a>
+      <div class="dots">⋯</div>
+    </div>
+  </div>
+
+  <!-- Main Wikipedia Article Content -->
+  <div class="container">
+    <div class="header">
+      <h1 class="title">HTML</h1>
+      <hr>
+    </div>
+
+    <div class="toc">
+      <div class="toc-title">Contents</div>
+      <ul>
+        <li><a href="#history">1 History</a></li>
+        <li><a href="#markup">2 Markup</a>
+          <ul>
+            <li><a href="#elements">2.1 Elements</a></li>
+            <li><a href="#attributes">2.2 Attributes</a></li>
+          </ul>
+        </li>
+        <li><a href="#semantic-html">3 Semantic HTML</a></li>
+        <li><a href="#delivery">4 Delivery</a></li>
+        <li><a href="#html4-variations">5 HTML4 variations</a></li>
+        <li><a href="#html5">6 HTML5</a></li>
+        <li><a href="#see-also">7 See also</a></li>
+        <li><a href="#references">8 References</a></li>
+        <li><a href="#external-links">9 External links</a></li>
+      </ul>
+    </div>
+
+    <div class="infobox">
+      <div class="infobox-title">HTML</div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/250px-HTML5_logo_and_wordmark.svg.png" alt="HTML5 Logo">
+      <table>
+        <tr>
+          <th>Filename extension</th>
+          <td>.html<br>.htm</td>
+        </tr>
+        <tr>
+          <th>Internet media type</th>
+          <td>text/html</td>
+        </tr>
+        <tr>
+          <th>Type code</th>
+          <td>TEXT</td>
+        </tr>
+        <tr>
+          <th>Developed by</th>
+          <td>WHATWG</td>
+        </tr>
+        <tr>
+          <th>Initial release</th>
+          <td>1993; 30 years ago</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="tim">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Tim_Berners-Lee_April_2009.jpg/250px-Tim_Berners-Lee_April_2009.jpg" alt="Tim Berners-Lee">
+      <p>Tim Berners-Lee in April 2009</p>
+    </div>
+
+    <div class="content">
+      <p class="hatnote">"Hypertext" redirects here. For other uses, see <a href="#">Hypertext (disambiguation)</a>.</p>
+
+      <p><b>Hypertext Markup Language (HTML)</b> is the standard <a href="#">markup language</a> for documents designed to be displayed in a <a href="#">web browser</a>. It defines the content and structure of web content. It is often assisted by technologies such as <a href="#">Cascading Style Sheets (CSS)</a> and scripting languages such as <a href="#">JavaScript</a>.</p>
+
+      <p>Web browsers receive HTML documents from a web server or from local storage and render the documents into multimedia web pages. HTML describes the structure of a web page semantically and originally included cues for its appearance.</p>
+
+      <h2 id="history">History</h2>
+      <p>Development of HTML began in 1980 at CERN by Tim Berners-Lee...</p>
+
+      <h2 id="markup">Markup</h2>
+      <h3 id="elements">Elements</h3>
+      <p>HTML elements are the building blocks of HTML pages...</p>
+
+      <h3 id="attributes">Attributes</h3>
+      <p>Most attributes of an element are name-value pairs...</p>
+
+      <h2 id="semantic-html">Semantic HTML</h2>
+      <p>Semantic HTML is a way of writing HTML that emphasizes the meaning...</p>
+
+      <h2 id="delivery">Delivery</h2>
+      <p>HTML documents can be delivered by the same means as any other...</p>
+
+      <h2 id="html4-variations">HTML4 variations</h2>
+      <p>Since its inception, HTML and its associated protocols gained...</p>
+
+      <h2 id="html5">HTML5</h2>
+      <p>The W3C published HTML5 as a Recommendation in October 2014...</p>
+
+      <h2 id="see-also">See also</h2>
+      <ul>
+        <li>Dynamic HTML</li>
+        <li>HTML5</li>
+        <li>XHTML</li>
+      </ul>
+
+      <h2 id="references">References</h2>
+      <div class="references">
+        <ol>
+          <li>Berners-Lee, Tim. "Information Management: A Proposal". W3C.</li>
+          <li>"HTML 4.0 Specification". W3C.</li>
+        </ol>
+      </div>
+
+      <h2 id="external-links">External links</h2>
+      <ul>
+        <li><a href="https://html.spec.whatwg.org/">HTML Living Standard</a></li>
+        <li><a href="https://www.w3.org/TR/html52/">HTML 5.2 Recommendation</a></li>
+      </ul>
+    </div>
+  </div>
+
+</body>
+</html>

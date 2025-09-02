@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML - Wikipedia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      background: #f8f9fa;
+    }
+
+    .top-bar {
+      background-color: #eaecf0;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      cursor: pointer;
+    }
+
+    .hamburger div {
+      width: 20px;
+      height: 2px;
+      background-color: #000;
+    }
+
+    .logo {
+      height: 30px;
+    }
+
+    .search-box {
+      margin-left: auto;
+    }
+
+    .search-box input {
+      padding: 6px;
+    }
+
+    .main-content {
+      display: flex;
+      padding: 20px;
+      gap: 20px;
+    }
+
+    .article {
+      flex: 3;
+    }
+
+    .sidebar {
+      flex: 1;
+      background: white;
+      border: 1px solid #ccc;
+      padding: 10px;
+      font-size: 14px;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .note {
+      font-style: italic;
+      font-size: 14px;
+      color: #444;
+      margin-bottom: 10px;
+    }
+
+    .sidebar img {
+      width: 100px;
+      display: block;
+      margin: 0 auto 10px;
+    }
+
+    .sidebar table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 0;
+    }
+
+    .sidebar td {
+      padding: 4px;
+      border-top: 1px solid #ccc;
+    }
+
+    .sidebar td:first-child {
+      font-weight: bold;
+      width: 40%;
+    }
+
+    a {
+      color: #0645AD;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    code {
+      background: #eee;
+      padding: 2px 4px;
+      border-radius: 3px;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-bar">
+    <div class="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/6/63/Wikipedia-logo.png" alt="Wikipedia Logo">
+    <div class="search-box">
+      <input type="text" placeholder="Search Wikipedia">
+    </div>
+  </div>
+
+  <div class="main-content">
+    <div class="article">
+      <h1>HTML</h1>
+      <p class="note">".htm" and ".html" redirect here. For other uses, see <a href="#">HTM</a>.</p>
+
+      <p><strong>Hypertext Markup Language (HTML)</strong> is the standard <a href="#">markup language</a> for documents designed to be displayed in a <a href="#">web browser</a>. It defines the content and structure of <a href="#">web content</a>. It is often assisted by technologies such as <a href="#">Cascading Style Sheets</a> (CSS) and <a href="#">scripting languages</a> such as <a href="#">JavaScript</a>.</p>
+
+      <p><a href="#">Web browsers</a> receive HTML documents from a <a href="#">web server</a> or from local storage and <a href="#">render</a> the documents into multimedia web pages. HTML describes the structure of a <a href="#">web page semantically</a> and originally included cues for its appearance.</p>
+
+      <p><a href="#">HTML elements</a> are the building blocks of HTML pages. With HTML constructs, <a href="#">images</a> and other objects such as <a href="#">interactive forms</a> may be embedded into the rendered page. HTML provides a means to create <a href="#">structured documents</a> by denoting structural <a href="#">semantics</a> for text such as headings, paragraphs, lists, <a href="#">links</a>, quotes, and other items. HTML elements are delineated by <em>tags</em>, written using <a href="#">angle brackets</a>. Tags such as <code>&lt;img&gt;</code> and <code>&lt;input&gt;</code> directly introduce content into the page. Other tags such as <code>&lt;p&gt;</code> and <code>&lt;/p&gt;</code> surround and provide information about document text and may include sub-element tags. <a href="#">Browsers</a> do not display the HTML tags, but use them to interpret the content of the page.</p>
+
+      <p>HTML can embed programs written in a <a href="#">scripting language</a> such as JavaScript, which affects the behavior and content of web pages. The inclusion of CSS defines the look and layout of content. The World Wide Web Consortium (W3C), former maintainer of the HTML and current maintainer of the CSS standards, has encouraged the use of CSS over explicit presentational HTML since 1997.[3] A form of HTML, known as HTML5, is used to display video and audio, primarily using <code>&lt;Canvas&gt;</code>the element, together with JavaScript.</p>
+
+      <p>In 1980, <a>physicist Tim Berners-Lee</a>, a contractor at <a>CERN</a>, proposed and prototyped ENQUIRE, a system for CERN researchers to use and share documents. In 1989, Berners-Lee wrote a memo proposing an Internet-based hypertext system.[4] Berners-Lee specified HTML and wrote the browser and server software in late 1990. That year, Berners-Lee and CERN data systems engineer Robert Cailliau collaborated on a joint request for funding, but the project was not formally adopted by CERN. In his personal notes of 1990, Berners-Lee listed "some of the many areas in which hypertext is used"; an encyclopedia is the first entry.[5]</p>
+
+      <p> </p>
+    </div>
+
+    <div class="sidebar">
+      <h3 style="text-align:center;">HTML</h3>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML5 Logo">
+      <p style="text-align: center;">Official logo of <a href="#">HTML5</a></p>
+      <table>
+        <tr><td><a href="#">Filename extension</a></td><td><code>.html</code><br><code>.htm</code></td></tr>
+        <tr><td><a>Internet media type</a></td><td><code>text/html</code></td></tr>
+        <tr><td><a>Type code</a></td><td>TEXT</td></tr>
+        <tr><td><a>Uniform Type Identifier (UTI)</a></td><td><code>public.html</code></td></tr>
+        <tr><td>Developed by</td><td><a href="#">WHATWG</a><br><a href="#">World Wide Web Consortium </a>(W3C; formerly)</td></tr>
+        <tr><td>Initial release</td><td>1993; 32 years ago</td></tr>
+        <tr><td><a href="#">Latest release</a></td><td><a>Living Standard</a></td></tr>
+        <tr><td>Type of format</td><td><a>Document file format</a></td></tr>
+        <tr><td><a href="#">Contained by</a></td><td><a>Web browser</a></td></tr>
+        <tr><td><a href="#">Extended from</a></td><td><a>SGML</a></td></tr>
+        <tr><td><a href="#">Extended to</a></td><td><a>XHTML</a></td></tr>
+        <tr><td><a href="#">Open format?</a></td><td><a>Yes</a></td></tr>
+        <tr><td><a href="#">Website</a></td><td><a>html.spec.whatwg.org</a></td></tr>
+      </table>
+    </div>
+      </table>
+    </div>
+  </div>
+
+</body>
+</html>
