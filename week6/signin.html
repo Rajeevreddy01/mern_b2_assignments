@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="signin.css">
+</head>
+<body>
+    <form>
+        <input type="email" placeholder="Email"><br>
+        <input type="text" placeholder="First Name"><br>
+        <input type="text" placeholder="Last name"><br>
+        <input type="password" placeholder="Password"><br>
+        <p id="error-msg"></p>
+        <input type="checkbox" id="subscribe"><label for="subscribe">Email me with news and updates</label>
+        <p>By signing up you agree to our <a href="https://www.w3schools.com/about/about_copyright.asp">Terms of Service</a> and <a href="https://www.w3schools.com/about/about_privacy.asp">Privacy Policy</a></p>
+        <input type="button" value="Create Account" onclick="processPassword()">
+    </form>
+</body>
+<script>
+    function processPassword() {
+        var errorPara = document.getElementById("error-msg");
+        var pass = document.querySelector('input[type="password"]');
+
+        if (pass.value.trim() === "") {
+            errorPara.innerHTML = "<em style='color: #e53935;'>Password must have a value!</em>";
+            alert("Password: " + pass.value);
+        } else {
+            errorPara.innerHTML = "";
+            alert("Password: " + pass.value);
+        }
+    }
+</script>
+</html>
